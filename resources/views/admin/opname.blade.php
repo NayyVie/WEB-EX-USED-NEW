@@ -12,16 +12,16 @@
 
     <style>
         /* =====================================================
-                                                                                                                                                                                                                                                           STOK & OPNAME
-                                                                                                                                                                                                                                                           ===================================================== */
+                                                                                                                                                                                                                                                                       STOK & OPNAME
+                                                                                                                                                                                                                                                                       ===================================================== */
 
         .stock-page {
             width: 100%;
         }
 
         /* ================================
-                                                                                                                                                                                                                                                           SUMMARY CARDS
-                                                                                                                                                                                                                                                           ================================ */
+                                                                                                                                                                                                                                                                       SUMMARY CARDS
+                                                                                                                                                                                                                                                                       ================================ */
 
         .summary-grid {
             display: grid;
@@ -143,8 +143,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                                                                           FILTER AREA
-                                                                                                                                                                                                                                                           ================================ */
+                                                                                                                                                                                                                                                                       FILTER AREA
+                                                                                                                                                                                                                                                                       ================================ */
 
         .filter-card {
             background: #ffffff;
@@ -278,8 +278,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                                                                           TABLE
-                                                                                                                                                                                                                                                           ================================ */
+                                                                                                                                                                                                                                                                       TABLE
+                                                                                                                                                                                                                                                                       ================================ */
 
         .table-card {
             background: #ffffff;
@@ -446,8 +446,8 @@
         }
 
         /* ================================
-                                                                                                                                                                                                                                                           RESPONSIVE
-                                                                                                                                                                                                                                                           ================================ */
+                                                                                                                                                                                                                                                                       RESPONSIVE
+                                                                                                                                                                                                                                                                       ================================ */
 
         @media (max-width: 1100px) {
             .summary-grid {
@@ -498,8 +498,8 @@
         }
 
         /* =========================================================
-                                                                                           MODAL OPNAME FISIK
-                                                                                        ========================================================= */
+                                                                                                       MODAL OPNAME FISIK
+                                                                                                    ========================================================= */
 
         .opname-modal-overlay,
         .sync-modal-overlay {
@@ -526,8 +526,8 @@
 
 
         /* =========================================================
-                                                                                           MODAL OPNAME
-                                                                                        ========================================================= */
+                                                                                                       MODAL OPNAME
+                                                                                                    ========================================================= */
 
         .opname-modal {
 
@@ -840,8 +840,8 @@
 
 
         /* =========================================================
-                                                                                           MODAL SINKRONKAN
-                                                                                        ========================================================= */
+                                                                                                       MODAL SINKRONKAN
+                                                                                                    ========================================================= */
 
         .sync-modal {
 
@@ -1078,12 +1078,12 @@
             </div>
 
 
-            {{-- ITEM BERSELISIH --}}
+            {{-- ITEM SELISIH --}}
             <div class="summary-card">
 
                 <div class="summary-top">
                     <span class="summary-title">
-                        Item Berselisih
+                        Item Selisih
                     </span>
 
                     <span class="summary-icon icon-orange">
@@ -1106,7 +1106,7 @@
 
                 <div class="summary-top">
                     <span class="summary-title">
-                        Nilai Perselisih
+                        Nilai Selisih
                     </span>
 
                     <span class="summary-icon icon-red">
@@ -1218,48 +1218,13 @@
 
                 <div class="table-title-area">
                     <h3>
-                        Tabel Komparasi Stok Fisik Lapangan vs Catatan IBM Maximo
+                        Rekomendasi Stock Count Opname Fisik
                     </h3>
 
                     <p>
                         Menampilkan barang yang memiliki selisih stok fisik dan Maximo.
                     </p>
                 </div>
-
-                <a href="{{ route('StockAdmin.riwayat') }}"
-                    style="
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 7px 10px;
-            background: #0f3b91;
-            color: white;
-            border-radius: 7px;
-            text-decoration: none;
-            font-size: 10px;
-            font-weight: 600;
-            white-space: nowrap;
-       ">
-                    Riwayat Opname
-                </a>
-
-                <a href="{{ route('StockAdmin.riwayatRekonsiliasi') }}"
-                    style="
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 7px 10px;
-        background: #0874c9;
-        color: white;
-        border-radius: 7px;
-        text-decoration: none;
-        font-size: 10px;
-        font-weight: 600;
-        white-space: nowrap;
-   ">
-                    Riwayat Rekonsiliasi
-                </a>
-
             </div>
 
 
@@ -1274,7 +1239,7 @@
                             <th>Bin / Lokasi Rak</th>
                             <th>Stok Fisik</th>
                             <th>Stok Maximo</th>
-                            <th>Selisih (Delta)</th>
+                            <th>Selisih</th>
                             <th>Nilai Deviasi</th>
                             <th>Aksi Rekonsiliasi</th>
                         </tr>
@@ -1370,11 +1335,6 @@
                                         <button type="button" class="btn-opname" onclick="openOpnameModal(this)">
                                             Opname Fisik
                                         </button>
-
-                                        <button type="button" class="btn-sync" onclick="openSyncModal(this)">
-                                            Sinkronkan
-                                        </button>
-
                                     </div>
                                 </td>
 
@@ -1390,14 +1350,11 @@
                                     </div>
 
                                     <div style="font-size: 11px; color: #94a3b8; margin-top: 5px;">
-                                        Seluruh data stok fisik dan Maximo saat ini sesuai,
-                                        atau stok belum diisi.
+                                        Seluruh data stok fisik dan Maximo saat ini sesuai.
                                     </div>
-
                                 </td>
                             </tr>
                         @endforelse
-
                     </tbody>
 
 
@@ -1466,7 +1423,7 @@
 
                         <div class="opname-info-item">
 
-                            <span>Stok Sistem</span>
+                            <span>Stok Maximo</span>
 
                             <strong id="opnameSystemStock">
                                 -
@@ -1480,7 +1437,7 @@
                     <div class="opname-form-group">
 
                         <label for="physicalStock">
-                            Jumlah Stok Fisik
+                            Stok Fisik
                         </label>
 
                         <div class="opname-input-wrapper">
@@ -1962,5 +1919,4 @@
             }
         });
     </script>
-
 @endsection

@@ -749,62 +749,13 @@
             padding: 20px 32px 40px;
         }
 
-        /* Alert */
-
-        .warning-box {
-            min-height: 72px;
-            border-radius: 12px;
-            /* border: 1px solid #e4ad38; */
-            background: linear-gradient(90deg, #ffcc004f, #e6c56ba8);
-            padding: 14px 17px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 23px;
-        }
-
-        .warning-left {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-        }
-
-        .warning-icon {
-            color: #a78114;
-            font-size: 35px;
-            font-weight: 500;
-        }
-
-        .warning-text h3 {
-            font-size: 15px;
-            color: #a78114;
-            margin-bottom: 4px;
-        }
-
-        .warning-text p {
-            font-size: 9px;
-            color: #977759;
-        }
-
-        .warning-btn {
-            background: #28221b;
-            border: 1px solid #705d3100;
-            color: #ffda56;
-            padding: 5px 20px;
-            border-radius: 7px;
-            font-family: inherit;
-            font-size: 12px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
         /* =========================================
            STAT CARDS
         ========================================= */
 
         .stat-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 16px;
             margin-bottom: 23px;
         }
@@ -858,40 +809,12 @@
             color: #7c8ba0;
         }
 
-        .stat-sub {
-            margin-top: 9px;
-            font-size: 10px;
-            color: #72829a;
-        }
-
         .stat-link {
             margin-top: 9px;
             display: inline-block;
             color: #009ff1;
             font-size: 9px;
             text-decoration: none;
-        }
-
-        .accuracy {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-        }
-
-        .progress {
-            width: 100%;
-            height: 5px;
-            background: #7f7f7f57;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-top: 12px;
-        }
-
-        .progress-bar {
-            height: 100%;
-            width: 70%;
-            background: #08a9ed;
-            border-radius: 8px;
         }
 
         /* =========================================
@@ -1510,10 +1433,6 @@
                 overflow-wrap: anywhere;
             }
 
-            .stat-sub {
-                line-height: 1.5;
-            }
-
             .stat-link {
                 line-height: 1.4;
             }
@@ -1760,10 +1679,6 @@
 
             .stat-value {
                 font-size: 22px;
-            }
-
-            .stat-sub {
-                font-size: 9px;
             }
 
             .stat-link {
@@ -2260,7 +2175,7 @@
                         <img src="{{ asset('assets/images/icon-penerimaan.png') }}" alt="PO Icon">
                     </span>
 
-                    <span>Penerimaan Barang (PO)</span>
+                    <span>Purchase Orders (PO)</span>
 
                 </a>
 
@@ -2272,7 +2187,7 @@
                         <img src="{{ asset('assets/images/icon-pengeluaran.png') }}" alt="WO Icon">
                     </span>
 
-                    <span>Pengeluaran Barang (WO)</span>
+                    <span>Work Orders (WO)</span>
 
                 </a>
 
@@ -2288,6 +2203,13 @@
 
                 </a>
 
+                <div class="menu-divider"></div>
+
+                {{-- PENGELOLAAN --}}
+
+                <div class="menu-title">
+                    Pengelolaan & Laporan
+                </div>
 
                 <a href="{{ route('riwayatTransaksi') }}"
                     class="menu-item {{ request()->routeIs('riwayatTransaksi') ? 'active' : '' }}">
@@ -2299,15 +2221,6 @@
                     <span>Riwayat Transaksi</span>
 
                 </a>
-
-                <div class="menu-divider"></div>
-
-                {{-- PENGELOLAAN --}}
-
-                <div class="menu-title">
-                    Pengelolaan & Laporan
-                </div>
-
 
                 <a href="{{ route('materialBekas') }}"
                     class="menu-item {{ request()->routeIs('materialBekas') ? 'active' : '' }}">
@@ -2513,41 +2426,6 @@
         ========================================== --}}
 
             <section class="content">
-
-
-                {{-- WARNING --}}
-
-                <div class="warning-box">
-
-                    <div class="warning-left">
-
-                        <div class="warning-icon">
-                            ⚠
-                        </div>
-
-                        <div class="warning-text">
-
-                            <h3>
-                                Perhatian: Ditemukan 3 Item Ex Used Berselisih
-                            </h3>
-
-                            <p>
-                                Segera lakukan rekonsiliasi dan verifikasi fisik untuk memastikan
-                                data gudang sesuai dengan kondisi barang aktual.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <button class="warning-btn">
-                        Buka
-                    </button>
-
-                </div>
-
-
                 {{-- =========================================
                  STAT CARDS
             ========================================== --}}
@@ -2556,47 +2434,6 @@
 
 
                     {{-- CARD 1 --}}
-
-                    <div class="stat-card">
-
-                        <div class="stat-top">
-
-                            <span class="stat-label">
-                                Ketepatan Stok
-                            </span>
-
-                            <div class="stat-icon">
-                                ⚖
-                            </div>
-
-                        </div>
-
-
-                        <div class="accuracy">
-
-                            <div class="stat-value">
-                                70.0%
-                            </div>
-                        </div>
-
-
-                        <div class="stat-sub">
-                            7 dari 10 item akurat 100%
-                        </div>
-
-
-                        <div class="progress">
-
-                            <div class="progress-bar" style="width:70%;">
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    {{-- CARD 2 --}}
-
                     <div class="stat-card">
 
                         <div class="stat-top">
@@ -2615,12 +2452,6 @@
                         <div class="stat-value" style="font-size:23px;">
                             Rp 893.960.000
                         </div>
-
-
-                        <div class="stat-sub">
-                            10 katalog material aktif terdaftar
-                        </div>
-
 
                         <a href="#" class="stat-link">
                             Lihat Katalog Ex Barang →
@@ -2691,32 +2522,8 @@
 
                 </div>
 
-
                 {{-- =========================================
-                 QUICK ACTION
-            ========================================== --}}
-
-                {{-- <div class="quick-action"> --}}
-
-                {{-- <div class="quick-title">
-
-                        <div class="quick-title-icon">
-                            ▤
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Aksi Cepat Transaksi & Lapangan
-                            </h3>
-
-                            <p>
-                                Percepat proses pergudangan menggunakan sistem terintegrasi
-                            </p>
-
-                        </div>
-
-                    </div> --}}
+                 QUICK BUTTONS --}}
 
                 <section class="quick-buttons">
 
@@ -2728,11 +2535,11 @@
 
                         <div class="quick-action-content">
                             <span class="quick-action-title">
-                                Penerimaan Barang
+                                Purchase Orders
                             </span>
 
                             <span class="quick-action-subtitle">
-                                Input barang masuk
+                                Catat barang dari PO
                             </span>
                         </div>
 
@@ -2750,11 +2557,11 @@
 
                         <div class="quick-action-content">
                             <span class="quick-action-title">
-                                Pengeluaran Barang
+                                Work Orders
                             </span>
 
                             <span class="quick-action-subtitle">
-                                Input barang keluar
+                                Catat barang untuk WO
                             </span>
                         </div>
 
@@ -2799,7 +2606,7 @@
                             </span>
 
                             <span class="quick-action-subtitle">
-                                Scan spare part
+                                Scan material
                             </span>
                         </div>
 
@@ -2837,7 +2644,7 @@
                                     </h3>
 
                                     <p>
-                                        Perbandingan stok aktual hasil opname dengan
+                                        Perbandingan stok aktual dengan
                                         data sistem gudang
                                     </p>
 

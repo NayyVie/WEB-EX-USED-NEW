@@ -1,16 +1,15 @@
 @extends('layouts.app-admin')
 
-@section('title', 'Pengeluaran Barang')
+@section('title', 'Work Orders')
 
-@section('page-title', 'Pengeluaran Barang')
-@section('page-subtitle', 'Pemeriksaan dan verifikasi laporan Ex Barang dari unit kerja')
+@section('page-title', 'Work Orders')
 
 @section('content')
 
     <style>
         /* =========================================================
-                                                                                                                                                                                                                                                                                                               PENGELUARAN BARANG - ADMIN GUDANG
-                                                                                                                                                                                                                                                                                                               ========================================================= */
+                                                                                                                                                                                                                                                                                                                   PENGELUARAN BARANG - ADMIN GUDANG
+                                                                                                                                                                                                                                                                                                                   ========================================================= */
 
         .pengeluaran-page {
             width: 100%;
@@ -19,8 +18,8 @@
         }
 
         /* =========================
-                                                                                                                                                                                                                                                                                                               HEADER
-                                                                                                                                                                                                                                                                                                               ========================= */
+                                                                                                                                                                                                                                                                                                                   HEADER
+                                                                                                                                                                                                                                                                                                                   ========================= */
 
         .pengeluaran-header {
             display: flex;
@@ -71,8 +70,8 @@
         }
 
         /* =========================
-                                                                                                                                                                                                                                                                                                               SUMMARY CARDS
-                                                                                                                                                                                                                                                                                                               ========================= */
+                                                                                                                                                                                                                                                                                                                   SUMMARY CARDS
+                                                                                                                                                                                                                                                                                                                   ========================= */
 
         .summary-grid {
             display: grid;
@@ -161,8 +160,8 @@
         }
 
         /* =========================
-                                                                                                                                                                                                                                                                                                               FILTER
-                                                                                                                                                                                                                                                                                                               ========================= */
+                                                                                                                                                                                                                                                                                                                   FILTER
+                                                                                                                                                                                                                                                                                                                   ========================= */
 
         .filter-card {
             background: #fff;
@@ -257,8 +256,8 @@
         }
 
         /* =========================
-                                                                                                                                                                                                                                                                                                               TABLE
-                                                                                                                                                                                                                                                                                                               ========================= */
+                                                                                                                                                                                                                                                                                                                   TABLE
+                                                                                                                                                                                                                                                                                                                   ========================= */
 
         .table-card {
             background: #fff;
@@ -403,8 +402,8 @@
         }
 
         /* =========================
-                                                                                                                                                                                                                                                                                                               PAGINATION
-                                                                                                                                                                                                                                                                                                               ========================= */
+                                                                                                                                                                                                                                                                                                                   PAGINATION
+                                                                                                                                                                                                                                                                                                                   ========================= */
 
         .table-footer {
             padding: 15px 20px;
@@ -463,8 +462,8 @@
 
 
         /* =========================================================
-                                                                                                                                                                                                                                                                                                               RESPONSIVE
-                                                                                                                                                                                                                                                                                                               ========================================================= */
+                                                                                                                                                                                                                                                                                                                   RESPONSIVE
+                                                                                                                                                                                                                                                                                                                   ========================================================= */
 
         @media (max-width: 1200px) {
 
@@ -566,8 +565,8 @@
         }
 
         /* =========================================================
-                                                                                                                                                                                                                                                       MODAL PENGELUARAN BARANG BARU
-                                                                                                                                                                                                                                                       ========================================================= */
+                                                                                                                                                                                                                                                           MODAL PENGELUARAN BARANG BARU
+                                                                                                                                                                                                                                                           ========================================================= */
 
         .pengeluaran-modal-overlay {
             position: fixed;
@@ -940,8 +939,8 @@
         }
 
         /* =========================
-                                                                                                                                                                                                                                           UKURAN GAMBAR DI TABEL
-                                                                                                                                                                                                                                           ========================= */
+                                                                                                                                                                                                                                               UKURAN GAMBAR DI TABEL
+                                                                                                                                                                                                                                               ========================= */
 
         .pengeluaran-table td img {
             width: 130px;
@@ -1089,7 +1088,7 @@
                         <path d="M12 5v14"></path>
                         <path d="M5 12h14"></path>
                     </svg>
-                    Pengeluaran Barang Baru
+                    Work Orders
                 </button>
 
             </div>
@@ -1473,7 +1472,7 @@
                 <div class="pengeluaran-modal-header">
 
                     <div>
-                        <h2>Formulir Pengeluaran Barang</h2>
+                        <h2>Formulir Work Orders</h2>
 
                         <p>
                             Input Ex Used
@@ -1833,7 +1832,7 @@
                     saveButton.addEventListener('click', function() {
 
                         alert(
-                            'Data pengeluaran barang berhasil disimpan dan siap disinkronkan ke Maximo.'
+                            'Data work order berhasil disimpan.'
                         );
 
                         closeModal();
@@ -1857,7 +1856,7 @@
 
                     <div class="detail-report-brand">
                         <div>
-                            <strong>Laporan Pengeluaran Barang</strong>
+                            <strong>Laporan Work Order</strong>
                             <span>Goods Issue Work Order</span>
                         </div>
                     </div>
@@ -2145,7 +2144,7 @@
                             </div>
 
                             <p>
-                                Saya menyatakan bahwa data pengeluaran barang
+                                Saya menyatakan bahwa data work order
                                 yang tercantum pada laporan ini telah diperiksa
                                 dan dapat dipertanggungjawabkan.
                             </p>
@@ -2423,8 +2422,8 @@
             }
 
             /* =====================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                DETAIL & CETAK LAPORAN
-                                                                                                                                                                                                                                                                                                                                                                                                                ===================================================== */
+                                                                                                                                                                                                                                                                                                                                                                                                                        DETAIL & CETAK LAPORAN
+                                                                                                                                                                                                                                                                                                                                                                                                                        ===================================================== */
 
             .pengeluaran-detail-overlay {
                 position: fixed;

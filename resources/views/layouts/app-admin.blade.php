@@ -1165,7 +1165,7 @@
                         <img src="{{ asset('assets/images/icon-penerimaan.png') }}" alt="PO Icon">
                     </span>
 
-                    <span>Penerimaan Barang (PO)</span>
+                    <span>Purchase Orders (PO)</span>
 
                 </a>
 
@@ -1177,7 +1177,7 @@
                         <img src="{{ asset('assets/images/icon-pengeluaran.png') }}" alt="WO Icon">
                     </span>
 
-                    <span>Pengeluaran Barang (WO)</span>
+                    <span>Work Orders (WO)</span>
 
                 </a>
 
@@ -1213,6 +1213,16 @@
                     Pengelolaan & Laporan
                 </div>
 
+                <a href="{{ route('riwayatTransaksi') }}"
+                    class="menu-item {{ request()->routeIs('riwayatTransaksi') ? 'active' : '' }}">
+
+                    <span class="menu-icon">
+                        <img src="{{ asset('assets/images/icon-transactions.png') }}" alt="Riwayat Icon">
+                    </span>
+
+                    <span>Riwayat Transaksi</span>
+
+                </a>
 
                 <a href="{{ route('materialBekas') }}"
                     class="menu-item {{ request()->routeIs('materialBekas') ? 'active' : '' }}">
@@ -1232,18 +1242,6 @@
                     </span>
 
                     <span>Pemindai Barcode</span>
-
-                </a>
-
-
-                <a href="{{ route('laporanAdmin') }}"
-                    class="menu-item {{ request()->routeIs('laporanAdmin') ? 'active' : '' }}">
-
-                    <span class="menu-icon">
-                        <img src="{{ asset('assets/images/icon-laporan2.png') }}" alt="Icon Laporan">
-                    </span>
-
-                    <span>Laporan & BAST</span>
 
                 </a>
             </nav>
@@ -1385,7 +1383,7 @@
                             </a>
 
                             {{-- KELUAR --}}
-                            <form action="#" method="POST">
+                            <form action="{{ route('logout') }}" method="POST">
 
                                 @csrf
 

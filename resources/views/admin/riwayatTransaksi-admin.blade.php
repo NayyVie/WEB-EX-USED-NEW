@@ -9,9 +9,9 @@
 
     <style>
         /* =========================================================
-                                               RIWAYAT TRANSAKSI ADMIN
-                                               Warna utama: putih + biru
-                                            ========================================================= */
+                                                   RIWAYAT TRANSAKSI ADMIN
+                                                   Warna utama: putih + biru
+                                                ========================================================= */
 
         .transaction-page {
             width: 100%;
@@ -20,8 +20,8 @@
         }
 
         /* =========================
-                                               HEADER
-                                            ========================= */
+                                                   HEADER
+                                                ========================= */
 
         .transaction-header {
             display: flex;
@@ -49,8 +49,8 @@
         }
 
         /* =========================
-                                               FILTER / TAB AREA
-                                            ========================= */
+                                                   FILTER / TAB AREA
+                                                ========================= */
 
         .transaction-filter {
             background: #ffffff;
@@ -170,14 +170,14 @@
         }
 
         /* .transaction-search-icon {
-                            position: absolute;
-                            left: 10px;
-                            top: 50%;
-                            transform: translateY(-50%);
-                            color: #7890a9;
-                            font-size: 13px;
-                            pointer-events: none;
-                        } */
+                                position: absolute;
+                                left: 10px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                color: #7890a9;
+                                font-size: 13px;
+                                pointer-events: none;
+                            } */
 
         .transaction-status {
             height: 35px;
@@ -193,8 +193,8 @@
         }
 
         /* =========================
-                                               TABLE
-                                            ========================= */
+                                                   TABLE
+                                                ========================= */
 
         .transaction-table-card {
             background: #ffffff;
@@ -282,8 +282,8 @@
         }
 
         /* =========================
-                                               TRANSACTION NUMBER
-                                            ========================= */
+                                                   TRANSACTION NUMBER
+                                                ========================= */
 
         .transaction-number {
             color: #203c64;
@@ -299,8 +299,8 @@
         }
 
         /* =========================
-                                               TYPE BADGE
-                                            ========================= */
+                                                   TYPE BADGE
+                                                ========================= */
 
         .transaction-type {
             display: inline-flex;
@@ -329,8 +329,8 @@
         }
 
         /* =========================
-                                               REF
-                                            ========================= */
+                                                   REF
+                                                ========================= */
 
         .transaction-ref {
             color: #1572ce;
@@ -340,8 +340,8 @@
         }
 
         /* =========================
-                                               ITEM
-                                            ========================= */
+                                                   ITEM
+                                                ========================= */
 
         .item-name {
             color: #344e6f;
@@ -356,8 +356,8 @@
         }
 
         /* =========================
-                                               LOCATION
-                                            ========================= */
+                                                   LOCATION
+                                                ========================= */
 
         .location-main {
             color: #4b6078;
@@ -372,8 +372,8 @@
         }
 
         /* =========================
-                                               RECIPIENT
-                                            ========================= */
+                                                   RECIPIENT
+                                                ========================= */
 
         .recipient-name {
             color: #40566f;
@@ -388,8 +388,8 @@
         }
 
         /* =========================
-                                               STATUS
-                                            ========================= */
+                                                   STATUS
+                                                ========================= */
 
         .sync-status {
             display: inline-flex;
@@ -412,8 +412,8 @@
         }
 
         /* =========================
-                                               ACTION
-                                            ========================= */
+                                                   ACTION
+                                                ========================= */
 
         .transaction-action {
             display: flex;
@@ -436,8 +436,8 @@
         }
 
         /* =========================
-                                               EMPTY STATE
-                                            ========================= */
+                                                   EMPTY STATE
+                                                ========================= */
 
         .transaction-empty {
             text-align: center;
@@ -447,8 +447,8 @@
         }
 
         /* =========================================================
-                                               RESPONSIVE
-                                            ========================================================= */
+                                                   RESPONSIVE
+                                                ========================================================= */
 
         @media (max-width: 1200px) {
 
@@ -544,8 +544,8 @@
     <div class="transaction-page">
 
         <!-- =========================================
-                                                 HEADER
-                                            ========================================== -->
+                                                     HEADER
+                                                ========================================== -->
 
         <div class="transaction-header">
 
@@ -555,7 +555,7 @@
                 </h1>
 
                 <p class="transaction-subtitle">
-                    Pencatatan real-time penerimaan PO, pengeluaran WO,
+                    Pencatatan real-time PO, WO,
                     dan transfer terintegrasi IBM Maximo
                 </p>
             </div>
@@ -563,8 +563,8 @@
 
 
         <!-- =========================================
-                                                 FILTER
-                                            ========================================== -->
+                                                     FILTER
+                                                ========================================== -->
 
         <div class="transaction-filter">
 
@@ -575,15 +575,15 @@
                 </button>
 
                 <button type="button" class="transaction-tab receipt">
-                    ↙ &nbsp; Penerimaan PO
+                    ↙ &nbsp; PO
                 </button>
 
                 <button type="button" class="transaction-tab issue">
-                    ↗ &nbsp; Pengeluaran WO
+                    ↗ &nbsp; WO
                 </button>
 
                 <button type="button" class="transaction-tab mutation">
-                    ⇄ &nbsp; Mutasi Antar Unit
+                    ⇄ &nbsp; Mutasi Gudang
                 </button>
 
             </div>
@@ -623,8 +623,8 @@
 
 
         <!-- =========================================
-                                                 TABLE
-                                            ========================================== -->
+                                                     TABLE
+                                                ========================================== -->
 
         <div class="transaction-table-card">
 
@@ -681,8 +681,8 @@
                     <tbody id="transactionTableBody">
 
                         <!-- =====================================
-                                                                 DATA 1
-                                                            ====================================== -->
+                                                                     DATA 1
+                                                                ====================================== -->
 
                         <tr>
 
@@ -783,8 +783,8 @@
 
 
                         <!-- =====================================
-                                                                 DATA 2
-                                                            ====================================== -->
+                                                                     DATA 2
+                                                                ====================================== -->
 
                         <tr>
 
@@ -889,8 +889,8 @@
 
 
                         <!-- =====================================
-                                                                 DATA 3
-                                                            ====================================== -->
+                                                                     DATA 3
+                                                                ====================================== -->
 
                         <tr>
 
@@ -1006,8 +1006,8 @@
 
     <script>
         /* =========================================
-                                               SEARCH TRANSAKSI
-                                            ========================================== */
+                                                   SEARCH TRANSAKSI
+                                                ========================================== */
 
         document.addEventListener('DOMContentLoaded', function() {
 

@@ -44,11 +44,16 @@ class LocationController extends Controller
         ]);
 
         // Koordinat kantor/unit
-        $officeLatitude = -7.376830912097001;
-        $officeLongitude = 112.738121641038;
+        // $officeLatitude = -7.376830912097001;
+        // $officeLongitude = 112.738121641038;
 
-        // $officeLatitude = -7.315719533002872;
-        // $officeLongitude = 112.72977874470426;
+        // Koordinat Kos 
+        $officeLatitude = -7.315719533002872;
+        $officeLongitude = 112.72977874470426;
+
+        // Koordinat Kampus
+        // $officeLatitude = -7.310953294882996;
+        // $officeLongitude = 112.72886074461584;
 
         // Koordinat pengguna
         $userLatitude = (float) $request->latitude;
